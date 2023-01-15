@@ -6,20 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belajar Jquery</title>
   </head>
-  <body>Kemana kamu ingin pergi</h1>
-    <ul>
-      <li>Banjarmasin</li>
-      <li class="jakarta">Surabaya</li>
-      <li>Semarang</li>
-    </ul>
+  <body>
+    <ul class="lokasi"></ul>
+    <button>Get Price</button>
     <!-- jquery 3.3.1 CDN -->
     <script src="jquery-3.3.1.min.js"></script>
     <script>
       // Jika halaman sudah ready jalankan script di bawah
-      $(document).ready(function() {
-        // Mengubah text element dengan class jakarta
-        $(".jakarta").text("Jakarta");
-      })
+      $(document).ready(function () {
+        let price = $("<h2>$300</h2>");
+        var jogja = $("<li class='jogja'><strong>Yogyakarta</strong></li>");
+        var bali = $("<li class='bali'>Bali</li>");
+        var bjm = $("<li class='bjm'>Banjarmasin</li>");
+        var brb = $("<li class='brb'>Barabai</li>");
+        var subjudul = $("<h2>Pilih Tujuan Anda</h2>");
+        var penutup = $("<h3>Terima Kasih</h3>");
+        let mtp = $("<li><input type='text' class='mtp' value='Martapura' /></li>");
+
+        // Add
+        $(".lokasi").before(subjudul);
+        $(".lokasi").prepend(jogja);
+        $(".lokasi").append(bali);
+        brb.appendTo($(".lokasi"));
+        bjm.appendTo($(".lokasi"));
+        mtp.appendTo($(".lokasi"));
+        $(".lokasi").append(penutup);
+
+        $("button").click(function () {
+          price.insertAfter($(".lokasi"));
+        });
+
+        // GET
+        // mendapatkan konten text dari element yang dipilih (tanpa markup HTMl)
+        console.log($(".jogja").text());
+        // mendapatkan konten text dari element yang dipilih (dengan markup HTMl)
+        console.log($(".jogja").html());
+        // Mendapatkan value dari inputan
+        console.log($(".inputan").val());
+
+        // SET
+        // Mengatur kontent dari element yang dipilih
+        $(".jogja").html("<em>Hantakan</em>");
+        $(".bjm").text("Babai");
+        $(".mtp").val("Papua");
+
+        // REMOVE
+        $(".bjm").remove();
+        $(".jogja").empty();
+      });
     </script>
   </body>
 </html>
