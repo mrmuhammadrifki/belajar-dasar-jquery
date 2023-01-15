@@ -5,44 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Belajar Jquery</title>
-    <style>
-      .merah {
-        color: red;
-      }
-
-      .biru {
-        color: blue;
-      }
-    </style>
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css" />
   </head>
   <body>
-    <h1>Kamu ingin pergi kemana?</h1>
-    <ul class="lokasi">
-      <li>Barabai</li>
-      <li>Banjarmasin</li>
-      <li>Surabaya</li>
-    </ul>
-    <button class="ubah-biru">Ubah Biru!</button>
-    <button class="ubah-merah">Ubah Merah Lagi!</button>
-    <button class="ubah-besar">Ubah Merah Lagi!</button>
+    <div class="your-class">
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt totam nobis vel illo, cumque recusandae odit error expedita, enim, quaerat quam a atque? Temporibus ipsa vitae quia nihil exercitationem voluptates repellat
+        obcaecati, amet libero debitis ipsum accusamus doloribus quo modi, incidunt autem nulla ex! Natus veritatis eius iusto ut alias quod, totam labore unde harum repellat similique! Fugiat assumenda exercitationem rem corporis magni
+        iusto nulla id perspiciatis dolorum voluptas magnam, doloribus quas dolore, eaque deleniti cumque eius minus soluta expedita omnis libero! Ipsum ipsam nulla voluptas laboriosam non enim culpa necessitatibus veritatis. Fuga magni
+        amet voluptatum voluptas soluta laborum at?
+      </div>
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae nam dignissimos beatae perspiciatis itaque ab, consectetur tenetur. Inventore vero necessitatibus quo accusamus non rerum odit saepe ratione cum minus? Ipsum
+        ducimus praesentium in non necessitatibus commodi impedit dicta possimus et? Officiis eius porro optio labore, quasi harum eaque asperiores reprehenderit reiciendis quidem, molestias laborum quia! Aperiam veritatis, eaque sapiente
+        ullam accusamus sit necessitatibus quaerat sint labore totam deserunt nesciunt aliquam aspernatur corporis facere, cum itaque illo laborum quidem expedita ad incidunt voluptas. Numquam obcaecati, non exercitationem fuga sequi
+        cupiditate doloribus doloremque amet beatae excepturi! Ad iusto consectetur ea, provident non neque debitis. Illo amet, repellat accusamus odio voluptatem inventore voluptates labore cupiditate quo ut ratione nobis modi nesciunt qui
+        optio rem a voluptas hic illum sit delectus iusto. Ex, enim iste. Possimus, dolores pariatur maiores libero vitae aliquam accusantium itaque officiis eligendi iste delectus consectetur fuga reprehenderit veritatis mollitia ipsum!
+      </div>
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam id neque, magni quae veritatis porro molestiae itaque aliquid aspernatur deserunt, nulla eius dolorum ab recusandae? Eaque quis molestias corporis consequuntur nisi
+        ex accusamus quam fugit deleniti, fugiat amet laboriosam reprehenderit omnis facilis iste commodi sapiente, magnam numquam mollitia ipsum repudiandae perferendis repellendus. Veritatis repellat, tenetur ipsum aut hic eos quisquam
+        debitis sed tempore maxime deleniti in explicabo a repellendus aperiam asperiores qui reprehenderit reiciendis recusandae voluptatem. Unde sequi enim ut ex nulla, officiis perferendis rerum vitae omnis reprehenderit consectetur,
+        molestias explicabo a officia, assumenda est quisquam commodi repellat ducimus. Libero cupiditate sed iusto facere itaque veniam non beatae consectetur ratione? Quod, voluptates ex iste consequatur doloremque cum dicta illo
+        accusamus culpa aliquid et facilis maiores ut delectus autem libero excepturi reprehenderit. Voluptate, ad molestiae cum hic esse veniam illum exercitationem incidunt animi facilis provident rerum! Velit nesciunt harum ratione
+        consequuntur. Quae veniam praesentium itaque dolorum, ut, impedit velit hic officiis laboriosam labore tenetur voluptatum accusamus cum recusandae et fugiat perferendis earum. Excepturi, quaerat temporibus. Ducimus non magni nostrum
+        eveniet, nesciunt qui laudantium ipsum cum ex a iste numquam ipsam corrupti vel! Consequuntur repellendus sint voluptatibus tenetur voluptas animi porro perferendis!
+      </div>
+    </div>
     <!-- jquery 3.3.1 CDN -->
     <script src="jquery-3.3.1.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
     <script>
-      // Jika halaman sudah ready jalankan script di bawah
       $(document).ready(function () {
-        $("li").addClass("merah");
-
-        $(".ubah-biru").on("click", function () {
-          $("li").removeClass("merah");
-          $("li").addClass("biru");
-        });
-        $(".ubah-merah").on("click", function () {
-          $("li").removeClass("biru");
-          $("li").addClass("merah");
-        });
-        $(".ubah-besar").on("click", function () {
-          $("li").css({ fontSize: 50 });
-        });
+        $(".your-class").slick();
       });
     </script>
   </body>
