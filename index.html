@@ -12,17 +12,12 @@
       <li class="barabai">
         Barabai
         <button id="keBarabai">Pergi!</button>
-        <button id="deleteBarabai">Delete!</button>
+        <button id="deleteBarabai">X</button>
       </li>
-      <li class="banjarmasin">
-        Banjarmasin
-        <button id="keBanjarmasin">Pergi!</button>
-      </li>
-      <li class="surabaya">
-        Surabaya
-        <button id="keSurabaya">Pergi!</button>
-      </li>
+      <li class="banjarmasin">Banjarmasin</li>
+      <li class="surabaya">Surabaya</li>
     </ul>
+    <button id="toggleBarabai">Toggle Barabai</button>
     <!-- jquery 3.3.1 CDN -->
     <script src="jquery-3.3.1.min.js"></script>
     <script>
@@ -35,6 +30,11 @@
         $("#deleteBarabai").on("click", function () {
           $(".barabai").remove();
           alert("Berhasil dihapus");
+        });
+        $("#toggleBarabai").on("click", function () {
+          $(".barabai").animate({
+            marginBottom: 500,
+          });
         });
       });
     </script>
